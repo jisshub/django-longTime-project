@@ -18,6 +18,11 @@ posts = [
      }
 ]
 
+aboutData = [{'aboutMe': 'I am a freelancer',
+              'follow_me': ['youtube', 'instagram', 'twitter'],
+              'courses_offered': ['html', 'css', 'vuejs']
+              }]
+
 
 # Create your views here.
 
@@ -27,4 +32,4 @@ def home(request):
 
 
 def about(request):
-    return render(request, 'blog/about.html')
+    return render(request, 'blog/about.html', {'getAbout': aboutData})
